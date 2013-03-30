@@ -1,0 +1,1 @@
+cmd_/work/driver_program/jittimer/jittimer.ko := ld -r -m elf_i386 -T /usr/src/linux-2.6.38/scripts/module-common.lds --build-id  -o /work/driver_program/jittimer/jittimer.ko /work/driver_program/jittimer/jittimer.o /work/driver_program/jittimer/jittimer.mod.o
