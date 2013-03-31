@@ -62,8 +62,9 @@ static int jittimer_fn(char *buf,char** start,off_t offset,int len,int *eof,void
 //		return -ERESTARTSYS;
 	printk(KERN_INFO "[jittimer/jittimer_fn] Success to wake up jitData timer\n");
 	del_timer_sync(&jitData->timer);
-	*start = buf;
+	//*start = buf;
 	jitData->len = jitData->buf - buf;
+	*eof = 1;
 	return jitData->len;
 }
 
